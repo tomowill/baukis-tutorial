@@ -1,0 +1,7 @@
+= Baukis - 顧客管理システム 
+
+== 説明
+
+Baukis は企業向けの顧客管理システムです。
+
+reference: https://www.oiax.jp/jissen_rails
