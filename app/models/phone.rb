@@ -11,10 +11,7 @@ class Phone < ActiveRecord::Base
 
   before_create do
     self.customer = address.customer if address
-<<<<<<< HEAD
-=======
     self.last_four_digits = self.number_for_index[-4, 4]
->>>>>>> 8ed8f0e05febec6ed431b754499b168183b68177
   end
 
   validates :number, presence: true,

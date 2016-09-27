@@ -16,4 +16,5 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, path: "provision/rails.sh", privileged: false
   config.vm.provision :shell, path: "provision/mysql-server.sh"
   config.vm.provision :shell, path: "provision/postgresql-server.sh"
+  config.ssh.insert_key = false
 end
