@@ -15,11 +15,11 @@ div.table-wrapper {
     border: solid $moderate $very_dark_magenta;
     tr {
       th {
-        backgroud-color: $dark_gray;
+        background-color: $dark_gray;
         color: $very_light_gray;
       }
       th, td { padding: $narrow }
-      td.email, td.date { font-family: monospace }
+      td.email, td.date, td.ip { font-family: monospace }
       td.boolean { text-align: center }
       td.actions {
         text-align: center;

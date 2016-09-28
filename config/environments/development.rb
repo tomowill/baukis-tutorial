@@ -38,6 +38,8 @@ Rails.application.configure do
   config.baukis = {
     staff: { host: 'baukis.example.com', path: '' },
     admin: { host: 'baukis.example.com', path: 'admin' },
-    customer: { host: 'baukis.example.com', path: 'mypage' }
+    customer: { host: 'baukis.example.com', path: 'mypage' },
+    restrict_ip_addresses: false
   }
+
 end

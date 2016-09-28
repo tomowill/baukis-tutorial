@@ -76,10 +76,13 @@ Rails.application.routes.draw do
         resources :staff_events, only: [ :index ]
       end
       resources :staff_events, only: [ :index ]
+      resources :allowed_sources, only: [ :index, :create ] do
+        delete :delete, on: :collection
+      end
     end
   end
 
-  constraints host: config[:admin][:host] do
+  constraints host: config[:customer][:host] do
     namespace :customer, path: config[:customer][:path] do
       root 'top#index'
       get 'login' => 'sessions#new', as: :login

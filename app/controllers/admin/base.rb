@@ -3,6 +3,8 @@ class Admin::Base < ApplicationController
   before_action :check_account
   before_action :check_timeout
 
+  helper_method :current_administrator
+
   private
   def current_administrator
     if session[:administrator_id]
@@ -10,8 +12,6 @@ class Admin::Base < ApplicationController
         Administrators.find_by(id: session[:administrator_id])
     end
   end
-
-  helper_method :current_administrator
 
   def authorize
     unless current_administrator
