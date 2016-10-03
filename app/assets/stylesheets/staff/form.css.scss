@@ -25,6 +25,7 @@ div#wrapper {
           }
           input[type='checkbox']+label { display: inline-block }
           input[type='radio']+label { display: inline-block }
+          span.instruction { font-size: $small; color: $dark_gray; }
         }
         div.input-block {
           input { margin-right: $narrow * 2;}
@@ -44,7 +45,11 @@ div#wrapper {
           display: inline;
           padding: 0;
           label { color: $red; }
-          input { background-color: $pink; }
+          input, textarea { background-color: $pink; }
+        }
+        div.with-erros {
+          label { color: $red; }
+          input, select { background-color: $pink;}
         }
         div.error-message {
           color: $red;
