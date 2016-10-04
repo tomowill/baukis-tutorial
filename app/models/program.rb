@@ -28,6 +28,11 @@ class Program < ActiveRecord::Base
     less_than_or_equal_to: 1000, allow_blank: true
   }
 
+  validates :max_number_of_participants, numericality:{
+    only_integer: true, greater_than_or_equal_to: 1,
+    less_than_or_equal_to: 1000, allow_blank: true
+  }
+
   validate do
     if min_number_of_participants && max_number_of_participants &&
       min_number_of_participants > max_number_of_participants
@@ -42,6 +47,10 @@ class Program < ActiveRecord::Base
     .order(application_start_time: :desc)
     .includes(:registrant)
   }
+
+  def deletable?
+    entries.empty?
+  end
 
   private
   def set_application_start_time
