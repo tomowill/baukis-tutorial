@@ -63,4 +63,4 @@ group :development, :test do
   gem 'pry-stack_explorer'
 end
 
-
+gem 'better_errors'
